@@ -1,7 +1,7 @@
 module ContentfulModel
   module ChainableQueries
     def self.included(base)
-      base.include ContentfulModel::Queries
+      base.send :include, ContentfulModel::Queries
       base.extend ClassMethods
     end
 

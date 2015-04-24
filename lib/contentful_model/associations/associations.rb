@@ -4,11 +4,11 @@
 module ContentfulModel
   module Associations
     def self.included(base)
-      base.include HasMany
-      base.include HasOne
-      base.include BelongsTo
-      base.include BelongsToMany
-      base.include HasManyNested
+      base.send :include, HasMany
+      base.send :include, HasOne
+      base.send :include, BelongsTo
+      base.send :include, BelongsToMany
+      base.send :include, HasManyNested
     end
   end
 end

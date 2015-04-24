@@ -4,7 +4,7 @@ module ContentfulModel
   module Validations
     def self.included(base)
       base.extend ClassMethods
-      base.include Contentful::Validations::PresenceOf
+      base.send :include, Contentful::Validations::PresenceOf
       attr_reader :errors
     end
 
